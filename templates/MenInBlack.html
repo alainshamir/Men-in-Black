@@ -1,0 +1,296 @@
+  <!DOCTYPE html>
+  <html>
+  <head>
+    <meta charset="UTF-8">
+      <title>Men IN Black</title>
+      <meta name="viewport" content="width=device-width", initial-scale=1.0>
+      <meta http-equiv="X-UA-Compatible" content="ie=edge">
+      <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.7.0/d3.min.js"></script>
+      <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+      <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.7.0/d3.min.js"></script> -->
+      <script src="https://code.jquery.com/jquery-2.1.4.js"></script>
+      <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">  -->
+
+      <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.3/dist/leaflet.css"
+      integrity="sha512-Rksm5RenBEKSKFjgI3a41vrjkw4EVPlJ3+OiI65vTjIdo9brlAacEuKOiQ5OFh7cOI1bkDwLqdLw3Zg0cRJAAQ=="
+      crossorigin=""/>
+      <!-- <script src="https://unpkg.com/leaflet@1.3.3/dist/leaflet.js"
+      integrity="sha512-tAGcCfR4Sc5ZP5ZoVz0quoZDYX5aCtEm/eu1KhSLj2c9eFrylXZknQYmxUssFaVJKvvc0dJQixhGjG2yXWiV9Q=="
+      crossorigin=""></script> -->
+      <script src="https://unpkg.com/leaflet@1.0.0-rc.3/dist/leaflet.js"></script>
+      
+      
+      <script src="https://unpkg.com/leaflet@1.3.3/dist/leaflet.js"
+      integrity="sha512-tAGcCfR4Sc5ZP5ZoVz0quoZDYX5aCtEm/eu1KhSLj2c9eFrylXZknQYmxUssFaVJKvvc0dJQixhGjG2yXWiV9Q=="
+      crossorigin=""></script>
+      <!-- NEW -->
+      
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+      <!-- <script type="text/javascript" src="static/js/config.js"></script> -->
+      <!-- <script type="text/javascript" src="static/js/logic4.js"></script> -->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.5.0/d3.min.js"></script>
+      <!-- <script src="https://cdn.plot.ly/plotly-latest.min.js"></script> -->
+      <!-- NEW -->
+
+      </head>
+  <body>
+    
+      <nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container-fluid">
+      <!-- Brand and toggle get grouped for better mobile display -->
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+      <!--  <a class="navbar-brand" href="#">Brand</a> -->
+      <a href="https://pixabay.com/en/photos/washington%20dc/" class="navbar-brand"><span class="glyphicon glyphicon-picture" aria-hidden="true"> IMGS </span></a>
+      </div>
+      <!-- Collect the nav links, forms, and other content for toggling -->
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav">
+          <li class="active"><a href="#">Link <span class="sr-only">(current)</span></a></li>
+          <li><a href="#">Link</a></li>
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">neighborhoods <span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <li><a href="#">Action</a></li>
+              <li><a href="#">Another action</a></li>
+              <li><a href="#">Something else here</a></li>
+              <li role="separator" class="divider"></li>
+              <li><a href="#">Separated link</a></li>
+              <li role="separator" class="divider"></li>
+              <li><a href="#">One more separated link</a></li>
+            </ul>
+          </li>
+        </ul>
+        <form class="navbar-form navbar-left">
+          <div class="form-group">
+            <!-- <input type="text" class="form-control" placeholder="Search"> -->
+            <input type="text" class="form-control" id="neighborhood" placeholder="Enter a neighborhood">
+          </div>
+          <!-- <button type="submit" class="btn btn-default">Submit</button> -->
+          <button id="submit" type="submit" class="btn btn-default">SUBMIT</button>
+        </form>
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href="#">Link</a></li>
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">CRIME PREDICTION WITH ML <span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <div class="thumbnail">
+              <li><a href="../static/burglary 1.png">Traning And Testing Data</a></li>
+              <li><a href="../static/burglary 2.png">burglary 2</li>
+              <li><a href="../static/burglary 3.png">burglary 3</a></li>
+              <li><a href="../static/burglary 4.png">burglary 4</a></li>
+              <li><a href="../static/homicide 2.png">homicide</a></li>
+              <!-- <li><a href="../static/theft 1.png">theft 1</a></li> -->
+              <li><a href="../static/theft 2.png">theft 1</a></li>
+              <li><a href="../static/theft 3.png">theft 2</a></li>
+              <li><a href="../static/theft 4.png">theft 3</a></li>
+              <li role="separator" class="divider"></li>
+              <li><a href="#">Tell us about your experience in your favorite City</a></li>
+            </ul>
+          </li>
+        </ul>
+        </div>
+      </div>  
+    </div>  
+  </nav>
+
+  <script src="https://code.jquery.com/jquery-2.1.4.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <!--  <nav class="navbar navbar-inverse navbar-fixed-top">
+          <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-nav-demo" aria-expanded="false">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+          <a href="https://pixabay.com/en/photos/washington%20dc/" class="navbar-brand"><span class="glyphicon glyphicon-picture" aria-hidden="true"> IMGS</a>
+        </div>
+        <ul class="nav navbar-nav">
+            <li><a href="#">About</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+        <div class="collapse navbar-collapse" id="bs-nav-demo">
+        <ul class="nav navbar-nav">
+            <li><a href="#">About</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href="#">Sign Up</a></li>
+          <li><a href="#">Login</a></li>
+        </ul>
+      </div>
+      </div>
+      </nav> -->
+
+    <div class="jumbotron">
+          <div style="text-align:center"  class="container">
+              <h1> Welcome To Our Nation's Capital</h1>
+              <img width="177" src="https://cdn.pixabay.com/photo/2016/08/29/15/59/washington-monument-1628558__480.jpg" alt=""/>
+              <!-- <img class="fit-picture" src="washington-monument-1628558__480.jpg" alt="IMMAGE OF THE WASHINGTON MONUMENT"/> -->
+              <h2><em><p>We understand moving to a new area can be an enormous decision, we want to help make your decision easier.</p></em></h2>
+          </div>
+      </div>
+      <br>
+     
+       <!-- <strong><p>Neighborhood Cluster Count Of Offenses</p></strong> -->
+      
+      <!-- <select id="selDataset" onchange="getData(this.value)"> -->
+      <!--<option value="Offenses">Offenses</option>-->
+      <!-- <option value="Robbery">Robbery</option>
+      <option value="motor_vehicle_theft">Motor Vehicle Theft</option>
+      <option value="theft_other">Theft (other)</option>
+      <option value="assault_with_dangerous_weapon">Assault with Dangerous Weapon</option>
+      <option value="sex_abuse">Sex Abuse</option>
+      </select> -->
+
+      <!-- <select id="selDataset" onchange="getData(this.value)"> -->
+        <!--<option value="Offenses">Offenses</option>-->
+        <!-- <option value="cluster 1">Kalorama Heights, Adams Morgan, Lanier Heights</option>
+        <option value="cluster 2">Columbia Heights, Mt. Pleasant, Pleasant Plains</option>
+        <option value="cluster 3">Howard University, Le Droit Park, Cardozo/Shaw</option>
+        <option value="cluster 4">Georgetown, Burleith/Hillandale</option>
+        <option value="cluster 5">West End, Foggy Bottom, GWU</option>
+        </select> -->
+      <script type="text/javascript" src='../static/js/app.js'></script>
+                <!-- Leaflet JS & CSS -->
+      <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.3/dist/leaflet.css"
+      integrity="sha512-Rksm5RenBEKSKFjgI3a41vrjkw4EVPlJ3+OiI65vTjIdo9brlAacEuKOiQ5OFh7cOI1bkDwLqdLw3Zg0cRJAAQ=="
+      crossorigin=""/>
+
+
+      
+
+          <!-- d3 JavaScript -->
+      
+      <script src="https://d3js.org/d3.v4.min.js"></script>
+      <!-- Our CSS -->
+      <!-- <link rel="stylesheet" type="text/css" href="static/css/style.css"> -->
+      <link rel="stylesheet" type="text/css" href="../static/css/style.css">
+      <!-- <link rel="stylesheet" href='./style.css'> -->
+
+  <!-- NEW CODE -->
+          <!-- <div class="container">
+                  <div style="text-align:center"  class="container">
+
+              <div class="row">
+                  <div class="col-lg-4 col-sm-6">
+                      <div class="thumbnail">
+                        <div id="plot"></div>
+                     </div>
+                  </div>
+              </div>
+          </div>
+          </div> -->
+          
+
+
+          <!-- <div class="row">
+              <div class="col-lg-4 col-sm-6">
+                  <div class="thumbnail">
+                    <div id="map"></div>
+                  </div>
+              </div>
+          </div> -->
+
+       <div class="container">
+          <div class="row">
+              <div class="col-md-5">
+                
+                <strong><p>Total Offenses By Year In Washington D.C</p></strong>
+                <select id="selDataset" onchange="getData(this.value)">
+                  <option value="Homicides">Homicides</option>
+                  <!-- <option value="cluster 1">Kalorama Heights, Adams Morgan, Lanier Heights</option>
+                  <option value="cluster 2">Columbia Heights, Mt. Pleasant, Pleasant Plains</option>
+                  <option value="cluster 3">Howard University, Le Droit Park, Cardozo/Shaw</option>
+                  <option value="cluster 4">Georgetown, Burleith/Hillandale</option>
+                  <option value="cluster 5">West End, Foggy Bottom, GWU</option>
+                  <option value="cluster 6">Dupont Circle, Connecticut Avenue/K Street</option>
+                  <option value="cluster 7">Shaw, Logan Circle</option>
+                  <option value="cluster 8">Downtown, Chinatown, Penn Quarters, Mount Vernon</option>
+                  <option value="cluster 9">Southwest Employment Area, Southwest/Waterfront</option>
+                  <option value="cluster 37">Sheridan, Barry Farm, Buena Vista</option>
+                  <option value="cluster 21">Edgewood, Bloomingdale, Truxton Circle, Eckington</option> -->
+                  <option value="Robbery">Robbery</option>
+                  <option value="motor vehicle theft">Motor Vehicle Theft</option>
+                  <option value="theft_other">Theft (other)</option>
+                  <option value="assault_with_dangerous_weapon">Assault with Dangerous Weapon</option>
+                  <option value="sex_abuse">Sex Abuse</option>
+                  </select>
+                   <!-- plot here -->
+                <div id="bar" style="height: 300px; width: 300px"></div> 
+                <!-- <div id="bar"></div> -->
+               </div>
+              <div class="col-md-7">
+                <strong><p>Neighborhood Cluster Count Of Homicides By Year</p></strong>
+              <div id="map" style="height: 300px; width: 400px"></div>
+              <!-- <div id="map"></div> -->
+              </div>
+          </div>
+      </div>
+       
+        <!-- <div class="container">
+            <div class="row">
+                <div class="col-md-5">
+
+
+       <table>
+          <tr>
+            <td>
+              STATS -->
+              <!-- <div id="lineGraph" style="height: 300px; width: 600px"></div> -->
+              <!-- <div id="lineGraph" style="height: 300px; width: 600px"></div>
+            </td>
+          </div>
+          <div class="col-md-7">
+            <td>
+              MAP -->
+              <!-- <div id="mapid" style="height: 610px; width: 600px"></div> -->
+              <!-- <div id="map" style="height: 610px; width: 600px"></div>
+            </td>
+          </tr>
+          </table>
+        </div>
+      </div>
+  </div> -->
+
+
+
+  <!-- NEW CODE -->
+      <!-- map div -->
+      
+
+      <!-- API key -->
+      <!-- <script type="text/javascript" src="static/js/config.js"></script> -->
+      <script type="text/javascript" src="../static/js/config.js"></script>
+      <!-- <script src='./config.js'></script> -->
+        <!-- JS  -->
+      <!-- <script type="text/javascript" src="static/js/logic.js"></script> -->
+     
+      <!-- <script type="text/javascript" src="static/js/script.js"></script> -->
+
+      <script type="text/javascript" src="../static/js/logic4.js"></script>
+
+            <!-- <script src='./logic4.js'></script> -->
+            <!-- <script src='./plots.js'></script> -->
+    <!--<script type="text/javascript" src="logic.js"></script> -->
+      <!-- <script type="text/javascript" src="logic2.js"></script> -->
+      <!-- <script type="text/javascript" src="logic3.js"></script> -->
+      <!-- <script type="text/javascript" src="static/js/logic4.js"></script>  -->
+      <!-- <script type="text/javascript" src='static/js/app.js'></script> -->
+     <!-- <script src="{{ url_for('static', filename='js/app.js') }}"></script>-->
+
+
+      <!-- <script src="https://code.jquery.com/jquery-2.1.4.js"></script> -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script> -->
+  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.5.0/d3.min.js"></script> -->
+  <script src="https://code.jquery.com/jquery-2.1.4.js"></script>
+  </body>
+  </html>

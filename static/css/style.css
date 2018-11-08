@@ -1,0 +1,56 @@
+/* body {
+ background: url(https://washington-org.s3.amazonaws.com/s3fs-public/dstove94_nighttime-time-lapse-shot-at-chinatown-archway_yesmydccool.jpg);
+ background-repeat: no-repeat;
+ border-width: 5px;
+ border-style: solid;
+ background-size: 100%;
+  } */
+/* body {
+    background: rgba(0,200,100,1);
+    border-color: pourple;
+    border-width: 5px;
+    border-style: solid;
+  } */
+
+/* html { 
+  background: url(https://washington-org.s3.amazonaws.com/s3fs-public/dstove94_nighttime-time-lapse-shot-at-chinatown-archway_yesmydccool.jpg)  no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+} */
+/* div,  */
+/* div>#bar{
+  height: 70px;
+  width: 70px;
+ } */
+
+/* div,  */
+/* #map {
+  height: 77%;
+  width: 100%;
+} */
+
+/* #map,
+body,
+html {
+  height: 100%;
+  width: 100%;
+} */
+
+.jumbotron {
+	color: red;
+  background: #ecf0f1;
+}
+
+.navbar-inverse {
+	background: #800020;
+}
+
+.navbar-inverse .navbar-nav>li>a{
+	color: white;
+}
+
+.navbar-invers .navbar-brand {
+	color: white;
+}
